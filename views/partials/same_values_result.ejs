@@ -1,0 +1,91 @@
+<div class="box-result" id="view-array" value="<%= html %>">
+  <!-- <div class="result" > -->
+  <div class=flex-container-2 id="results">
+
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Algorithm</th>
+          <th scope="col">Result</th>
+          <th class="time" scope="col">Calculation Time</th>
+          <th class="time" scope="col">Relative Speed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Algorithm"><u>'naive' algorithm</u><img class="thumb" src="/images/code_same_values_naive.png"
+              id="thumb" onclick="large(this)"></img></td>
+          <td data-label="Result"><b>
+              <%= resulta %>
+            </b></td>
+          <td class="time" data-label="Calculation Time"><b>
+              <%= time3 %> ms
+            </b></td>
+          <td data-label="Relative Speed" class="time"> <progress id="naive" value=<%=timePerc3 %> max="100"></progress>
+          </td>
+        </tr>
+        <!-- <tr>
+        <td class="time"></td>
+        <td class="time"></td>
+        <td class="time"> <progress id="naive" value=<%=timePerc3 %> max="100"></progress>
+          <h5>speed</h5>
+        </td>
+      </tr> -->
+        <tr>
+          <td data-label="Algorithm"><u>'fast' algorithm</u><img class="thumb" src="/images/code_same_values_fast.png"
+              id="thumb" onclick="large(this)"></img></td>
+          <td data-label="Result"><b>
+              <%= resultb %>
+            </b></td>
+          <td class="time" data-label="Calculation Time"><b>
+              <%= time4 %> ms
+            </b>
+          </td>
+          <td data-label="Relative Speed" class="time"> <progress id="fast" value=<%=timePerc4 %> max="100"></progress>
+          </td>
+        </tr>
+        <!-- <tr>
+        <td class="time"></td>
+        <td class="time"></td>
+        <td class="time"><progress id="fast" value=<%=timePerc4 %> max="100"></progress>
+          <h5>speed</h5>
+        </td>
+      </tr> -->
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+  <div class="box-array" id="array">
+    <a href="#home"><span class="span-up">&#8639;</span></a>
+    <a href="#arrayB"><span class="span-down">&#8643;</span></a>
+
+    <h6> The length of the first array is: <b>
+        <%= arraylengthA %>
+      </b> </h6>
+    <h6> The length of the second array is: <b>
+        <%= arraylengthB %>
+      </b></h6>
+
+    <div class="arrays" id="arrayA">
+      <img class="copynow" src="/images/copy.png" title="copy" onclick="copyArray(arraySorted)"></img>
+      <h6> This is the first array:</h6>
+      <h6 class="blue"><b id="arrayFirst" value="[<%= arrayA %>]">[<%= arrayA %>]</b></h6>
+      <h6></h6>
+    </div>
+
+    <a href="#home"><span class="span-up">&#8639;</span></a>
+    <a href="#footer"><span class="span-down">&#8643;</span></a>
+
+    <div class="arrays" id="arrayB">
+      <img class="copynow" src="/images/copy.png" title="copy" onclick="copyArray(arraySorted)"></img>
+      <h6> This is the second array: </h6>
+      <h6 class="blue"><b id="arraySecond" value="[<%= arrayB %>]">[<%= arrayB %>]</b></h6>
+      <a href="#home"><span class="span-up">&#8639;</span></a>
+    </div>
+  </div>
+</div>
+</div>

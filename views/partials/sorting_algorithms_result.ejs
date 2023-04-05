@@ -1,0 +1,185 @@
+<!-- sorting result: table + array -->
+<div class="box-result" id="sorting-result">
+
+    <div class="flex-item-empty"></div>
+    <div class=flex-container-2 id="results">
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Algorithm</th>
+                    <th class="time" scope="col">Calculation Time</th>
+                    <th class="time" scope="col">Relative Speed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Algorithm">
+                        <button id="myButton2" onclick="inBubbleSort()" name="list" class="sort-calc-array-table"
+                            value="easy">Bubble
+                            Sort
+                        </button>
+                        <img class="thumb" src="/images/code_bubble_sort.png" id="thumb" onclick="large(this)">
+                        </img>
+                    </td>
+                    <td class="time" id="bubble-sort-time" data-label="Calculation Time">
+                        <b>
+                            ms
+                        </b>
+                    </td>
+                    <td data-label="Relative Speed" class="time">
+                        <progress id="bubble-time" value="0" max="100">
+                        </progress>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Algorithm">
+                        <button id="myButton3" onclick="inInsertionSort()" name="list" class="sort-calc-array-table"
+                            value="easy">Insertion Sort
+                        </button>
+                        <img class="thumb" src="/images/code_insertion_sort.png" id="thumb" onclick="large(this)">
+                        </img>
+                    </td>
+                    <td class="time" id="insertion-sort-time" data-label="Calculation Time">
+                        <b>
+                            ms
+                        </b>
+                    </td>
+                    <td data-label="Relative Speed" class="time">
+                        <progress id="insertion-time" value="0" max="100">
+                        </progress>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Algorithm">
+                        <button id="myButton4" onclick="inMergeSortRecursive()" name="list" class="sort-calc-array-table"
+                            value="easy">Merge Sort Recursive
+                        </button>
+                        <img class="thumb" src="/images/code_merge_sort_recursive.png" id="thumb" onclick="large(this)">
+                        </img>
+                    </td>
+                    <td class="time" id="merge-sort-recursive-time" data-label="Calculation Time">
+                        <b>
+                            ms
+                        </b>
+                    </td>
+                    <td data-label="Relative Speed" class="time">
+                        <progress id="merge-rec-time" value="0" max="100">
+                        </progress>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-label="Algorithm">
+                        <button id="myButton4" onclick="inMergeSortIterative()" name="list" class="sort-calc-array-table"
+                            value="easy">Merge Sort Iterative 
+                        </button>
+                        <img class="thumb" src="/images/code_merge_sort_iterative.png" id="thumb" onclick="large(this)">
+                        </img>
+                    </td>
+                    <td class="time" id="merge-sort-iterative-time" data-label="Calculation Time">
+                        <b>
+                            ms
+                        </b>
+                    </td>
+                    <td data-label="Relative Speed" class="time">
+                        <progress id="merge-it-time" value="0" max="100">
+                        </progress>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td data-label="Algorithm"><button id="myButton5" onclick="inSelectionSort()" name="list"
+                            class="sort-calc-array-table" value="easy">Selection
+                            Sort
+                        </button>
+                        <img class="thumb" src="/images/code_selection_sort.png" id="thumb" onclick="large(this)">
+                        </img>
+                    </td>
+                    <td class="time" id="selection-sort-time" data-label="Calculation Time">
+                        <b>
+                            ms
+                        </b>
+                    </td>
+                    <td data-label="Relative Speed" class="time">
+                        <progress id="selection-time" value="0" max="100">
+                        </progress>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Algorithm"><button id="myButton5" onclick="inQuickSort()" name="list"
+                            class="sort-calc-array-table" value="easy">Quick
+                            Sort
+                        </button>
+                        <img class="thumb" src="/images/code_quick_sort.png" id="thumb" onclick="large(this)">
+                        </img>
+                    </td>
+                    <td class="time" id="quick-sort-time" data-label="Calculation Time">
+                        <b>
+                            ms
+                        </b>
+                    </td>
+                    <td data-label="Relative Speed" class="time">
+                        <progress id="quick-time" value="0" max="100">
+                        </progress>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Algorithm"><button id="myButton5" onclick="inRadixSort()" name="list"
+                            class="sort-calc-array-table" value="easy">Radix
+                            Sort
+                        </button>
+                        <img class="thumb" src="/images/code_radix_sort.png" id="thumb" onclick="large(this)">
+                        </img>
+                    </td>
+                    <td class="time" id="radix-sort-time" data-label="Calculation Time">
+                        <b>
+                            ms
+                        </b>
+                    </td>
+                    <td data-label="Relative Speed" class="time">
+                        <progress id="radix-time" value="0" max="100">
+                        </progress>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+    <div class="flex-item-empty"></div>
+
+
+    <div class="box-array" id="array">
+        <a href="#sorting-result"><span class="span-up">&#8639;</span></a>
+        <a href="#unsorted-array"><span class="span-down">&#8643;</span></a>
+
+        <div class="arrays" id="sorted-array">
+            <img class="copynow" src="/images/copy.png" title="copy" onclick="copyArray(arraySorted)"></img>
+
+            <h6> This is the sorted array:</h6>
+            <h6 class="blue"> <b id="arraySorted"></b></h6>
+            <h6></h6>
+        </div>
+
+        <a href="#sorting-result"><span class="span-up">&#8639;</span></a>
+        <a href="#footer"><span class="span-down">&#8643;</span></a>
+
+        <div class="arrays" id="unsorted-array">
+            <img class="copynow" src="/images/copy.png" title="copy" onclick="copyArray(arrayUnsortedResult)"></img>
+            <h6> This is the array unsorted: </h6>
+            <!-- <h6 class="blue" id="arraySecond" value=[<%=arrayB %>]><b>[<%= arrayB %>]</b></h6> -->
+            <h6 class="blue"> <b id="arrayUnsortedResult"></b></h6>
+            <a href="#home"><span class="span-up">&#8639;</span></a>
+        </div>
+
+
+
+
+
+    </div>
+
+</div>
+<!-- </div> -->

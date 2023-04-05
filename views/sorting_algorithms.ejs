@@ -1,0 +1,122 @@
+<%- include("partials/header"); -%>
+
+    <div class="box" id="heading">
+        <h3>Sorting Algorithms</h3>
+    </div>
+
+
+
+
+    <!-- <div class=box id="calculation">
+        <div class="flex-container-calc">
+            <div class="calc-flex"></div>
+            <div class="calc-flex">
+                <h6 class="question">Try different sorting algorithms and compare the calculation time.You can pass in
+                    your own array of numbers or let the computer create a random
+                    array with different lengths.</h6>
+                <h5></h5>
+            </div>
+            <div class="calc-flex"></div>
+        </div>
+
+    </div> -->
+
+    <div class="flex-container-1">
+        <div class="calc-flex"></div>
+        <div class="calc-flex">
+            <div class="question">
+                <b>
+                    <h6>Try different sorting algorithms and compare the calculation time.
+                        <br>
+                        To start let the computer create a random array
+                        or pass in your own array of numbers.
+                    </h6>
+                </b>
+                <h5></h5>
+            </div>
+        </div>
+        <div class="calc-flex" id="calculation"></div>
+        <div class="flex-item-left">
+            <!-- <div class="calculation"> -->
+            <h6 class="question">&rarr; Generate a random array </h6>
+
+            <div class="calc-buttons-sa">
+                <!-- <button id="myButton1" onclick="arraySV(100)" name="list" class="calc-array" value="easy"> array length till
+              100
+              =></button> -->
+                <button id="myButton2" onclick="makeArray(10000)" name="list" class="calc-array-sv" value="easy">array
+                    length till 10,000 =>
+                </button>
+                <button id="myButton2" onclick="makeArray(50000)" name="list" class="calc-array-sv" value="easy">array
+                    length till 50,000 =>
+                </button>
+                <button id="myButton2" onclick="makeArray(100000)" name="list" class="calc-array-sv" value="easy">array
+                    length till 100,000 =>
+                </button>
+                <button id="myButton3" onclick="makeArray(500000)" name="list" class="calc-array-sv" value="easy">array
+                    length till 500,000 =>
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="flex-item-right">
+            <!-- <form action="/sorting_algorithms" method="post"> -->
+
+            <h6 class="question">&rarr; or pass in your own array</h6>
+            <div class="calc-buttons-sa">
+
+                <input type="text" name="array" id="arrayInput"
+                    placeholder="Pass in an array of numbers e.g. [12,25,2,458...]" autocomplete=off>
+
+                <button onclick="getArray()" class="input-array" name="list" value="easy">=></button>
+
+            </div>
+
+
+            <!-- </form> -->
+        </div>
+    </div>
+
+    <!-- <div class="flex-container-no-flex">
+            <div class="flex-item-empty"></div>
+            <!- <div class="flex-item-center"> -->
+    <!-- <!- <form action="/sorting_algorithms" method="post"> -->
+    <!-- 
+                <p>&rarr; Choose the way the sorting algorithm. </p> -->
+
+    <!-- <h5></h5> -->
+    <!-- <div class="calc-buttons"> -->
+    <!-- <button id="myButton1" onclick="arraySV(100)" name="list" class="calc-array" value="easy"> array length till
+              100
+              =></button> -->
+    <!-- <button id="myButton2" onclick="bubbleSort()" name="list" class="sort-calc-array" value="easy">Bubble
+                        Sort</button>
+                    <button id="myButton3" onclick="insertionSort()" name="list" class="sort-calc-array"
+                        value="easy">Insertion Sort</button>
+                    <button id="myButton4" onclick="mergeSort()" name="list" class="sort-calc-array"
+                        value="easy">Merge Sort</button>
+                    <button id="myButton5" onclick="selectionSort()" name="list" class="sort-calc-array" value="easy">Selection
+                        Sort</button>
+                </div> -->
+    <!-- </form> -->
+    <!-- </div> -->
+    <!-- <div class="flex-item-empty"></div> -->
+
+
+
+
+
+
+    <%- include("partials/sorting_modal"); -%>
+
+        <%- include("partials/pop_up_modal"); -%>
+
+
+
+            <%- include("partials/sorting_algorithms_result"); -%>
+
+                <%- include("partials/footer"); -%>

@@ -1,0 +1,78 @@
+<%- include("partials/header"); -%>
+
+  <div class="box" id="heading">
+    <h3>Same Values Squared</h3>
+  </div>
+
+
+
+  <div class="flex-container-1">
+    <div class="calc-flex"></div>
+    <div class="calc-flex">
+      <div class="question">
+        <h6>Has every value in the first array its corresponding value squared in the second array? </h6>
+        <!-- <div class="explanation"> -->
+        <h5>E.g. [2,1,3,4] and [16,4,1,9] return true</h5>
+      </div>
+    </div>
+
+    <div class="calc-flex"></div>
+
+    <div class="flex-item-right">
+      <form action="/same_values" method="post">
+
+        <h6 class="question">&rarr; Generate random arrays </h6>
+
+        <h5>About 50% of the cases will be true, 25% will be false because of difference in array length, 25% will
+          be
+          false because the values don't match. Be patient. Calculation time can be up to several minutes for long
+          arrays.</h5>
+        <div class="calc-buttons-sa">
+          <!-- <button id="myButton1" onclick="arraySV(100)" name="list" class="calc-array" value="easy"> array length till
+              100
+              =></button> -->
+          <button id="myButton2" onclick="arraySV(10000)" name="list" class="calc-array-sv" value="easy">array length
+            till
+            10,000 =></button>
+          <button id="myButton3" onclick="arraySV(100000)" name="list" class="calc-array-sv" value="easy">array length
+            till
+            100,000 =></button>
+          <button id="myButton4" onclick="arraySV(500000)" name="list" class="calc-array-sv" value="easy">array length
+            till
+            500,000 =></button>
+          <button id="myButton5" onclick="arraySV(1000000)" name="list" class="calc-array-sv" value="easy">array length
+            till
+            1,000,000 =></button>
+        </div>
+      </form>
+    </div>
+
+    <div class="flex-item-left">
+      <!-- <div class="calculation"> -->
+      <form action="/same_values" method="post">
+        <h6 class="question">&rarr; Or pass in your two arrays</h6>
+        <div class="calc-buttons-sv">
+
+          <input type="text" name="array1" placeholder="Pass in an array of numbers e.g. [12,25,2,458...]"
+            autocomplete=off>
+          <input type="text" name="array2" placeholder="Pass in an array of numbers e.g. [12,25,2,458...]"
+            autocomplete=off>
+
+          <button class="input-array" name="list" value="easy">=></button>
+
+        </div>
+        <!-- </div> -->
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+  <%- include("partials/pop_up_modal"); -%>
+
+    <%- include("partials/same_values_result"); -%>
+
+      <%- include("partials/footer"); -%>

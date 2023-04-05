@@ -1,0 +1,52 @@
+<!-- The Modal -->
+<div id="modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+
+            <nav class="navbar navbar-default ">
+                <span class="close">&times;</span>
+                <div class="navbar-modal">
+                    <p class="navbar-brand">Choose a sorting algorithm</p>
+                </div>
+
+            </nav>
+        </div>
+        <div class="modal-body">
+            <div class=".flex-container-no-flex">
+                <div class="flex-item-empty"></div>
+                <div class="flex-item-center">
+                    <div class="calc-buttons">
+
+                        <button id="myButton2" onclick="inBubbleSort()" name="list" class="calc-array"
+                            value="easy">Bubble
+                            Sort</button>
+                        <button id="myButton3" onclick="inInsertionSort()" name="list" class="calc-array"
+                            value="easy">Insertion Sort</button>
+                        <button id="myButton4" onclick="inMergeSortRecursive()" name="list" class="calc-array" value="easy">Merge
+                            Sort Recursive</button>
+                        <button id="myButton4" onclick="inMergeSortIterative()" name="list" class="calc-array" value="easy">Merge
+                            Sort Iterative</button>
+                        <button id="myButton5" onclick="inSelectionSort()" name="list" class="calc-array"
+                            value="easy">Selection
+                            Sort</button>
+                        <button id="myButton5" onclick="inQuickSort()" name="list" class="calc-array" value="easy">Quick
+                            Sort</button>
+                        <button id="myButton5" onclick="inRadixSort()" name="list" class="calc-array" value="easy">Radix
+                            Sort</button>
+                    </div>
+                </div>
+                <div class="flex-item-empty"></div>
+                <div class="arrays" id="arrayB">
+                    <img class="copynow" src="/images/copy.png" title="copy" onclick="copyArray(arrayunsorted)"></img>
+                    <h6> This is the array unsorted: </h6>
+                    <h6 class="blue" id="arrayunsorted"><b></b></h6>
+                    <a href="#home"><span class="span-up">&#8639;</span></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
