@@ -19,10 +19,7 @@ let string;
 
 
 export function postBubbleSort(req, res) {
-
-console.log("post");
-
-  if (clicked) {
+    if (clicked) {
 
     strArray = arraySort(number);
     
@@ -59,9 +56,6 @@ console.log("post");
   timeSorted = objectBS.time;
   arraySorted = objectBS.result;
   
-
-
-
   res.redirect("/sorting_algorithms/#array");
 
 }
@@ -87,8 +81,7 @@ export function getBubbleSort(req, res) {
   } else {
 
     test = false;
-    console.log(length);
-    
+   
     res.render("sorting_algorithms",
       {
         // resulta: result2,
@@ -107,15 +100,14 @@ export function getBubbleSort(req, res) {
 }
 
 export function clickedUnsortedArray(req, res) {
-  console.log("clickUnsortedArray");
+  
   try {
     number = req.body.value;
     clicked = true;
-
   }
   catch (err) {
-    console.log(err)
-    res.status(500).json({
+  
+    return res.status(500).json({
       success: false,
       error: "we can't upload the number"
     })
@@ -123,9 +115,7 @@ export function clickedUnsortedArray(req, res) {
   
 }
 
-
 export function clickedSortArray(req, res) {
-  console.log("clickSortArray");
   try {
     number = req.body.value;
     clicked = true;
@@ -138,8 +128,6 @@ export function clickedSortArray(req, res) {
     })
   }
 }
-
-
 
 
 export default {

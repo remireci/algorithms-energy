@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-      
   "scripts": {
+    "install-server": "npm install --prefix server",
+    "install": "npm run install-server",
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cluster": "pm2 start server.js -i max"
+    "test": "jest",
+    "cluster": "pm2 start server.js -i max",
+    "deploy": "npm start --prefix server",
+    "deploy-cluster": "npm run cluster --prefix server"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,5 +21,8 @@
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "pm2": "^5.2.2"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
