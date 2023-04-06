@@ -1,3 +1,11 @@
+import fs from 'fs';
+let https;
+try {
+  https = await import('node:https');
+} catch (err) {
+  console.error('https support is disabled!');
+}
+import cluster from "cluster";
 import path from "path";
 import express from "express";
 const app = express();
@@ -9,6 +17,10 @@ import sortingAlgorithmsRouter from "./routes/sorting_algorithms/sorting_algorit
 //TODO const sortingRouter = require("./routes/sorting/...");
 
 // TODO app.use(express) etc?
+
+const PORT = process.env.PORT || 9000;
+
+cluster.schedulingPolicy = cluster.SCHED_RR;
 
 app.set("view engine", "ejs");
 
@@ -46,7 +58,20 @@ app.use("/same_values", sameValuesRouter);
 
 app.use("/sorting_algorithms", sortingAlgorithmsRouter);
 
-
+const server = https.createServer({
+    key: fs.readFileSync('key.pem'),
+    cert: fs.readFileSync('cert.pem'),
+  });
+  
+  async function startServer() {
+  
+    // app.listen();
+    server.listen(PORT, () => {
+      console.log(`Server is listening on port ${PORT}...`)
+    });
+  }
+  
+  startServer();
 
 // TO DO:
 // app.post('/clicked_unsorted_array', bubbleSortController.clickedUnsortedArray);
